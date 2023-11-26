@@ -1,0 +1,116 @@
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #181818;
+  width: 80px;
+  height: 100vh;
+  padding: 20px 0;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 40px;
+      height: auto;
+    }
+
+    .name {
+      font-size: 11px;
+      color: #cdc7c7;
+      letter-spacing: 1px;
+    }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      font-size: 20px;
+      margin: 20px 0;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: #4d4d4e;
+      position: relative;
+
+      i {
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        color: #ffd700;
+
+        svg {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: "";
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+      &:first-child {
+        &:after {
+          content: "HOME";
+        }
+      }
+    }
+
+    a.about-link {
+      &:after {
+        content: "ABOUT";
+      }
+    }
+
+    a.contact-link {
+      &:after {
+        content: "CONTACT";
+      }
+    }
+
+    a.portfolio-link {
+      &:after {
+        content: "PORTFOLIO";
+      }
+    }
+
+    a.active {
+      svg {
+        color: #ffd700;
+      }
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: #4d4d4e;
+      font-size: 18px;
+      margin: 5px 0;
+    }
+  }
+}
