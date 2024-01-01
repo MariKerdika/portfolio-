@@ -1,6 +1,7 @@
 import LogoS from "../../assets/images/7.png";
 import { Link } from "react-router-dom";
 import "./index.scss";
+import Logo from "./Logo";
 const Home = () => {
   return (
     <div className="container home-page">
@@ -17,6 +18,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   );
 };
