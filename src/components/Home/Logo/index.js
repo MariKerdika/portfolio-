@@ -39,7 +39,7 @@ const Logo = () => {
         viewBox="0 0 128 128"
         aria-hidden="true"
         role="img"
-        class="iconify iconify--noto"
+        className="iconify iconify--noto"
         preserveAspectRatio="xMidYMid meet"
       >
         <path
